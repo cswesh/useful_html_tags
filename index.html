@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super useful tips in HTML Tags</title>
+    <style>
+        progress{
+            width: 200px;
+            height: 50px;
+        }
+        section{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body style="background: #4f69df;">
+    <!-- 1. Details + summary tags -->
+    <details>
+        <summary>
+            Heading
+        </summary>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste ipsa id provident repudiandae praesentium quas ducimus cupiditate a, aspernatur unde facilis neque animi aliquam officiis eligendi! Alias sapiente voluptate totam necessitatibus ex iste aspernatur nam modi consequuntur ipsam velit veniam quidem ipsa voluptates dolores eius nihil natus minima, quos at fugiat. Magni, reprehenderit quisquam, eius quos perspiciatis placeat eveniet possimus quibusdam rem, ullam perferendis cumque. Beatae accusamus asperiores doloribus dolore fugiat, sint quas eum ipsum ratione veniam quia nemo dolorum perspiciatis magnam excepturi. Itaque illum ut voluptatum minima a quibusdam eaque recusandae distinctio rerum voluptates, assumenda quo hic nisi perferendis.</p>
+    </details>
+    <!-- 2. Input types -->
+    <br>
+    <input type="color" name="colorpicker" id="">
+    <br>
+    <input type="range" name="range" value="2" min="1" max="5">
+    <br>
+    <input type="date" name="date" id="">
+    <br>
+    <input type="datetime-local" name="datetime" id="">
+    <br>
+    <input type="time" name="time" id="">
+    <br>
+    <input type="week" name="week" id="">
+    <!-- 3. Meter Tag -->
+    <br>
+    <meter max="100" min="20" value="50"></meter>
+    <!-- 4. Progress Tag -->
+    <br>
+    <progress></progress>
+    <progress value="10" max="20"></progress>
+    <!-- 5. Details tag -->
+    <br>
+    <input type="text" list="dtList" size="50px" placeholder="Search">
+    <datalist id="dtList">
+        <option value="mercedes">DETAIL: A Luxury Car </option>
+        <option>bently</option>
+        <option>BMW</option>
+        <option>Tesla</option>
+        <option>Maruti</option>
+    </datalist>
+    <!-- 6. Opt Group -->
+    <br>
+    <br>
+    <select name="" id="">
+        <optgroup label="important">
+            <option value="abc">detail-important 1</option>
+            <option value="def">detail-important 2</option>
+        </optgroup>
+        <optgroup label="other">
+            <option value="ghi">detail 3</option>
+            <option value="jkl">detail 4</option>
+        </optgroup>
+    </select>
+    <!-- 7. JS closest -->
+    <br>
+    <br>
+    <article>
+        <div id="div01">Div 1</div>
+        <div id="div02">Div 2</div>
+        <section>
+            <div id="div02">Div 2</div>
+            <div id="div03">Div 3</div>
+            <div id="div04">Div 4</div>
+        </section>
+    </article>
+    <script>
+        let div3 = document.querySelector('#div03');
+        div3.closest('article').style.background = "green"
+    </script>
+</body>
+</html>
